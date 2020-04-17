@@ -1,1 +1,1 @@
-python3 program.py
+python3 /var/opt/serial-data/program.py
