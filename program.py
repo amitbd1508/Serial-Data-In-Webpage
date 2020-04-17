@@ -19,7 +19,7 @@ def write_page(data):
     fo.write("<link rel='shortcut icon' href='favicon.ico' />")
     fo.write("<link rel='icon' type='image/x-icon' href='favicon.ico' />")
     fo.write("<link rel='icon' type='image/png' href='favicon.png' />")
-    fo.write("</head><body><center><p style=\"color:black;font-size:200px;\">"+page_title+"</p>")
+    fo.write("</head><body><center><p style=\"color:black;font-size:100px;\">"+page_title+"</p>")
 
     fo.write("<h1 style=\"color:red;font-size:150px;\">"+str(data)+"</h1>")
 
@@ -44,13 +44,9 @@ try:
 
         time.sleep(3)
 except :
+    webbrowser.open_new_tab("serial.html")
     err = "Cannot start the application\nMake sure device is connected in "+serial_port
     print(err)
     write_page(err)
     time.sleep(2)
-    i = 0
-    webbrowser.open_new_tab("serial.html")
-    while 1:
-        write_page(i)
-        i = i+1
-        time.sleep(2)
+    
