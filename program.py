@@ -40,7 +40,8 @@ try:
         print(data)
 
         time.sleep(3)
-except :
+except Exception as ex:
     err = "Cannot start the application\nMake sure device is connected in "+serial_port
     print(err)
+    print(ex)
     
