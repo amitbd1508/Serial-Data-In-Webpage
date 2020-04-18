@@ -29,24 +29,18 @@ def write_page(data):
 
 try:
     s = serial.Serial(serial_port,baudrate)
-    s.dtr = 0 
-    s.dtr = 1
     print("Waiting for data...")
     time.sleep(2)
-    s.reset_input_buffer()
-
 
     webbrowser.open_new_tab("serial.html")
 
     while 1:
         data = s.readline().decode()
-        write_page(i)
+        write_page(data)
+        print(data)
 
         time.sleep(3)
 except :
-    webbrowser.open_new_tab("serial.html")
     err = "Cannot start the application\nMake sure device is connected in "+serial_port
     print(err)
-    write_page(err)
-    time.sleep(2)
     

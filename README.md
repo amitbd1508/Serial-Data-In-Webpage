@@ -25,3 +25,9 @@
 - Name : `SerialRead`
 - Command : `python3 /path to your program.py`
 - Comment: `ReadSerial will automaticly start`
+
+
+## Contact
+- Email: `amitbd1508#gmail.com`
+- Skype: `amitbd1508`
+- WhatsApp: `+8801675209053`
